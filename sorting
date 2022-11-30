@@ -1,0 +1,28 @@
+function print(a,n)
+{
+for (let i = 0; i <= n; i++)
+console.log(a[i]);
+}
+function sort(a,n)
+{
+for (let i = n;
+i >= 0; i--)
+for (let j = n;
+j > n - i; j--)
+if (a[j] > a[j-1]){
+let tempswap = a[j];
+a[j] = a[j - 1];
+a[j - 1] = tempswap;
+}
+print(a, n);
+}
+let n = 6;
+let a=[];
+a.push(12);
+a.push(14);
+a.push(32);
+a.push(20);
+a.push(42);
+a.push(5);
+a.push(35);
+sort(a, n);
